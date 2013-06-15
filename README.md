@@ -7,5 +7,5 @@
 > setting the object in question might be subject to race conditions, and I wonder how
 > to deal with this in the absence of locks in JavaScript.
 
-Well... I guess you could write a "lock" of sorts, if what you're saying is that something needs
-to have exclusive use of the object over the span of multiple events.
+Well... I guess you could write a "lock" of sorts, if what you're saying is that multiple things
+each need to have exclusive use of the object, where those uses span multiple events.
