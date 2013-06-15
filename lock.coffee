@@ -30,7 +30,8 @@ class Transaction
 
     finish: ->
         @_finished = true
-        @_gotoNextTransaction()
+        if @_isActive()
+            @_gotoNextTransaction()
 
     _isActive: ->
         @_lock._transactionIsActive this
